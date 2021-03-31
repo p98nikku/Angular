@@ -1,0 +1,25 @@
+<div class="title"><h1>{{title}}</h1></div>
+<div class="container">
+  <h1 class="text-center">{{title}}</h1>
+  
+  <div class="row">
+    <div class="col-md-3">
+<button (click)='showdbDemo()' class="btn btn-danger">Data binding demo</button>
+    </div>
+
+    <div class="col-md-3" class="warning">
+      <button (click)='showDirectiveDemo()' class="btn btn-warning" >Structural directive Demo</button>
+    </div> 
+
+  <div class="col-md-3" class="danger">
+    <button (click)='showProducts()' class="btn btn-danger" >Products List</button>
+  </div>
+</div>
+<hr/>
+
+<div  class="col-md-12">
+  <app-tshirtdatabinding *ngIf="ShowDataBindingDemo"></app-tshirtdatabinding>
+  <app-hello *ngIf="ShowDirectiveDemo"></app-hello>
+  <app-product *ngIf="showProductsTable"></app-product>
+</div>
+</div>
