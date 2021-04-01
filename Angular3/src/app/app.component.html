@@ -14,12 +14,19 @@
   <div class="col-md-3" class="danger">
     <button (click)='showProducts()' class="btn btn-danger" >Products List</button>
   </div>
+
+  <div class="col-md-3" class="infowarning">
+    <button (click)=' ShowMasterDetails()' class="btn btn-info" >MasterDetails</button>
+  </div> 
 </div>
 <hr/>
 
-<div  class="col-md-12">
+<div  class="row">
+  <div class="col-md-12">
   <app-tshirtdatabinding *ngIf="ShowDataBindingDemo"></app-tshirtdatabinding>
   <app-hello *ngIf="ShowDirectiveDemo"></app-hello>
   <app-product *ngIf="showProductsTable"></app-product>
+  <app-purchase *ngIf="showMasterDetails"></app-purchase>
+</div>
 </div>
 </div>

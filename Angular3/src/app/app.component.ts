@@ -12,19 +12,29 @@ export class AppComponent {
   ShowDataBindingDemo=true;
   ShowDirectiveDemo=false;
   showProductsTable=false;
+  showMasterDetails=false;
   showdbDemo():void{
     this.ShowDataBindingDemo=true;
     this.ShowDirectiveDemo=false;
     this.showProductsTable=false;
+    this.showMasterDetails=false;
   }
   showDirectiveDemo():void{
     this.ShowDataBindingDemo=false;
     this.ShowDirectiveDemo=true;
     this.showProductsTable=false;
+    this.showMasterDetails=false;
   }
   showProducts():void{
     this.showProductsTable=true;
     this.ShowDataBindingDemo=false;
     this.ShowDirectiveDemo=false;
+    this.showMasterDetails=false;
+  }
+  ShowMasterDetails():void{
+    this.showProductsTable=false;
+    this.ShowDataBindingDemo=false;
+    this.ShowDirectiveDemo=false;
+    this.showMasterDetails=true;
   }
 }
