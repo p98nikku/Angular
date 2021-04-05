@@ -1,0 +1,26 @@
+<div class="text-center"><h1>{{title}}</h1></div>
+<div class="col-md-4" >
+  <input type="number" placeholder="height" class="class"[(ngModel)]=h>
+  </div>
+  <div class="col-md-4">
+    <input type="number" placeholder="width" class="class"[(ngModel)]=w>
+  </div>
+  <div class="col-md-2">
+    
+  </div>
+  
+<hr>
+<div class="row">
+<div class="col-md-4">
+</div>
+<div class="col-md-4">
+  <img (mouseenter)='ChangeTshirtMouseEnter()' (mouseleave)='ChangeTshirtMouseExit()'
+  [src]='imgSource' [style.height.px]='h' [style.width.px]='w'
+  class="img img-fluid"/>
+</div>
+<div class="footer">
+<p class="db">This is an example of Data Binding where we have provided two inputs fields for entering height and width of an image ,by entering the dimension the size of image
+  will change accordingly and also when we will hover the cursor on the image , a new image of tshirt will be available .
+</p>
+</div>
+</div>
