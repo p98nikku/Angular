@@ -1,10 +1,7 @@
-.warning{
-    margin-left: 130px;
+.navbar-custom {
+    background-color: #17a2b8;
+    
 }
-.danger{
-    margin-left: 250px;
-}
-.infowarning{
-    margin-left: 410px;
-    margin-top: 10px;
+ .nav-item{
+    color: white;
 }

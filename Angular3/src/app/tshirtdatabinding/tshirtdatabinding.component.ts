@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 @Component({
   selector: 'app-tshirtdatabinding',
   templateUrl: './tshirtdatabinding.component.html',
@@ -10,10 +9,13 @@ export class TshirtdatabindingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-
+    
+  }
+  errorVar:any=undefined;
+  GenerateError():void{
+    this.errorVar.sort();
   }
   title="Choose Tshirt";
-
   //title = 'my-app';
   h=300;
   w=1000;
