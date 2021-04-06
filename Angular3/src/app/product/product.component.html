@@ -1,0 +1,58 @@
+<br>
+<br>
+<div class="col-md-12">
+    <table class="table">
+        <thead class="tablehead">
+            <tr>
+                <th>
+                    Id
+                </th>
+                <th>
+                    Title
+                </th>
+                <th>
+                    Price
+                </th>
+                <th>
+                    ExpiryDate
+                </th>
+                <th>
+                    Quantity
+                </th>
+                <th>
+                    Instock
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor ="let p of products">
+                <td>{{p.Id}}</td>
+                <td>{{p.Title}}</td>
+                <td>{{p.Price | currency :'INR'}}</td>
+                <td>{{p.ExpiryDate}}</td>
+                <td>{{p.Quantity}}</td>
+                <td>
+                    
+                    <ng-container *ngIf="p.inStock; then instock else outofStock">
+                    </ng-container>
+                     
+                    <ng-template #instock>
+                        <i class="fa fa-check-circle" aria-hidden="true"></i>
+                    </ng-template>
+                         <ng-template #outofStock>
+                               <i class="fa fa-times" aria-hidden="true"></i>
+                               <button class="btn btn-default">Order Now</button>
+                          </ng-template>
+
+                    
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+<div class="footer">
+    <p>
+        In this component we have used a dataservice to let the components access a function which return some data and is shown in the table, and if item is available in stock a button will e available in stock as a button will be visible to other product.
+    </p>
+</div>
+</div>
