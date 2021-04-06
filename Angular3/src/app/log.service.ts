@@ -14,15 +14,22 @@ export class LogService {
     ExpiryDate:"10-02-2020",
     inStock:true,
     Quantity:20
+   
 };
 pinr$:BehaviorSubject<IProduct>
   constructor() {
     this.pinr$=new BehaviorSubject(this.setData)
 
    }
-   setPrice(price:number){
-     this.setData.Price=price;
-     this.pinr$.next(this.setData);
-   }
-
+    setPrice(price:number)
+    {
+      this.setData.Price=price
+    }
+    updateProduct (p: IProduct){
+      this.setData={
+        ...p
+      }
+      this.pinr$.next(this.setData);
+    }
+   
 }

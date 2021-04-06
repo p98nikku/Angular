@@ -21,6 +21,9 @@ import { MyerrorhandlerService } from './myerrorhandler.service';
 import { LogService } from './log.service';
 import { AttributedirectiveComponent } from './attributedirective/attributedirective.component';
 import { LoginformComponent } from './loginform/loginform.component';
+import { Custompipe1Pipe } from './custompipe1.pipe';
+import { PricePipe } from './price.pipe';
+import {MatTableModule} from '@angular/material/table';
 
 @NgModule({
   declarations: [
@@ -37,13 +40,15 @@ import { LoginformComponent } from './loginform/loginform.component';
     HomeComponent,
     ErrorhandlerComponent,
     AttributedirectiveComponent,
-    LoginformComponent
+    LoginformComponent,
+    Custompipe1Pipe,
+    PricePipe
   ],
   imports: [
     AppRouting,
     BrowserModule,
     FormsModule,
-    BrowserAnimationsModule,MatExpansionModule,ReactiveFormsModule
+    BrowserAnimationsModule,MatExpansionModule,MatTableModule,ReactiveFormsModule
   ],
   providers: [LogService ,{provide: ErrorHandler,useClass:MyerrorhandlerService}],
   bootstrap: [AppComponent]

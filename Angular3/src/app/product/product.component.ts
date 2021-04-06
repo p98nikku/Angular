@@ -9,14 +9,15 @@ import {IProduct} from './IProduct';
 })
 export class ProductComponent implements OnInit {
 
-  products: IProduct[]=[];
+  products: IProduct[];
+  data:string;
+  price:number;
   constructor(private dataservice:DataService) { }
 
   ngOnInit(): void {
     this.products=this.dataservice.getProducts();
-    //Console.log(this.products);
+    console.log(this.products);
   }
-
+  displayedColumns: string[] = ['ID', 'TITLE', 'Price',  'ExpiryDate',  'Quantity' ];
   
-
 }

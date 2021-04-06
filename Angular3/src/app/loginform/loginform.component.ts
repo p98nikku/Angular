@@ -34,7 +34,7 @@ export class LoginformComponent implements OnInit {
       email:new FormControl(null,[Validators.required]),
       password: new FormControl(null,[Validators.required,Validators.minLength(5)]),
       age:new FormControl(null,[ageRange(this.min,this.max)]),
-      phoneNumber:new FormControl(null,[]),
+      phoneNumber:new FormControl(null,[Validators.required]),
       notification: new FormControl('email',[])
     });
   }
@@ -51,7 +51,7 @@ export class LoginformComponent implements OnInit {
     const phoneControl=this.loginForm?.get('phoneNumber');
     this.loginForm.get('notification')?.valueChanges.subscribe((data:string)=>{
       console.log(data);
-      if(data=='phone'){
+      if(data=='phoneNumber'){
         phoneControl?.setValidators([Validators.required])
       }
       else if(data=='email')

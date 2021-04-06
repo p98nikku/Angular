@@ -4,6 +4,10 @@
     height: 140px;
     width: 150px;
 }
-.heading{
+.heading1{
     font-family: 'Oswald', sans-serif;
+    text-align: center;
+}
+.jumb{
+    background-color: #e9ecef;
 }

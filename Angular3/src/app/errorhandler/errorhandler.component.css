@@ -3,7 +3,20 @@
     float: right;
 }
 .footer{
-    background-color:#17a2b8;
-    bottom: 0px;
-   
+    text-align: center;
+    color:grey;
+    padding-bottom: 20px;
+    bottom: 0;
+    display: block;
+    margin-left: 20px;
+}
+.class{
+    margin-right: 40px;
+    margin-top: 10px;
+   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.label2{
+    float: right;
 }
