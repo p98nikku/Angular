@@ -15,7 +15,7 @@ import { ChangecolorDirective } from './changecolor.directive';
 import { SharedataComponent } from './sharedata/sharedata.component';
 import { HomeComponent } from './home/home.component';
 import { RouterModule } from '@angular/router';
-import { AppRouting } from 'src/app-routing';
+import { AppRouting } from '../app-routing';
 import { ErrorhandlerComponent } from './errorhandler/errorhandler.component';
 import { MyerrorhandlerService } from './myerrorhandler.service';
 import { LogService } from './log.service';
