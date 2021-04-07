@@ -1,0 +1,49 @@
+<!-- <div class="row">
+    <h2 class="text-danger text-center">Master Details using component communication</h2>
+</div>
+<hr/>
+<div class="row">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th>Purchase-Id</th>
+                <th>Purchase-Name</th>
+            </tr> 
+        </thead>
+        <tbody>
+            <tr *ngFor= "let i of Items">
+                <td>{{i.Pid}}</td>
+                <td><button class="btn btn-link">{{i.Ptitle}}</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div> -->
+<br>
+<h1 class="heading" >MASTER DETAILS</h1>
+<br>
+<div class="col-md-12">
+    <mat-accordion class="example-headers-align" >
+        <mat-expansion-panel *ngFor="let i of Items">
+        <mat-expansion-panel-header>
+            <mat-panel-title>
+                <h2>{{i.Pid}}</h2>
+            </mat-panel-title>
+            <mat-panel-description>
+                <h2 class="text-info">{{i.Ptitle}}
+                </h2>
+            </mat-panel-description>
+        </mat-expansion-panel-header>
+        <app-purchase-order [PurchaseItem]='i'></app-purchase-order>
+        </mat-expansion-panel>
+    </mat-accordion>
+    <br>
+    <br>
+    <div class="footer">
+        <p>
+            In this component we make use @Input/@output decorators in two components both of which have access to a service named dataservice
+  The component 1 fetches data from service and display an expansion panel, and that expansion panel contains a table of component 2.
+          </p>
+    </div>
+
+</div>
+
