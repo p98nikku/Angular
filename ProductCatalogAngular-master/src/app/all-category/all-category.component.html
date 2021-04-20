@@ -1,0 +1,28 @@
+<hr>
+<h1 class="text-center">Product Details</h1>
+<hr>
+<div>
+    <p class="lead text-center">All Product</p>
+    <hr class="my-4">
+    <div class="text-center">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>NAME</th>
+                    <th>DESCRIPTION</th>
+                    <th>SHORT CODE</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let i of AllCategories">
+                        <td>{{i.CId}}</td>
+                        <td>{{i.CName}}</td>
+                        <td>{{i.CDescription}}</td>
+                        <td>{{i.CShortCode}}</td>
+                        
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
