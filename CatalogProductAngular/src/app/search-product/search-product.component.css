@@ -1,0 +1,10 @@
+table {
+    width: 100%;
+  }
+  .row{
+    
+      background-color: bisque;
+      overflow: hidden;
+      width: 100%;
+  
+  }
